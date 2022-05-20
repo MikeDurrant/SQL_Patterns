@@ -16,3 +16,14 @@ explain analyze select * from staff where salary > 75000
 -- index is used and the execution time is very fast at 0.034ms
 -- execution time can change every time so you need to do multiple and take an average
 explain analyze select * from staff where salary > 150000
+
+
+-- why index?
+-- faster to read - smaller than tables; can usually be read in memory
+-- read from speeds
+--   main memory = 100ns
+--   1MB from SSD = 1ms
+--   1MB from HDD = 20ms
+-- indexes are ordered
+-- indexes can have duplicates
+-- indexes use storage space - but their benefit outweighs this cost
